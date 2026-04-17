@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Giới thiệu Taxi Phan Thiết - Dịch vụ 4-7 chỗ uy tín</title>
+    <title>Giới thiệu Taxi Phan Thiết | Dịch vụ 4-7 chỗ uy tín</title>
 
+    <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
 
     <style>
         body {
@@ -34,10 +36,6 @@
             text-align: center;
         }
 
-        .hero h1 {
-            font-size: 36px;
-        }
-
         /* BOX */
         .box {
             background: #fff;
@@ -45,7 +43,6 @@
             border-radius: 16px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             height: 100%;
-            text-align: center;
             transition: 0.3s;
         }
 
@@ -60,9 +57,13 @@
             margin-bottom: 10px;
         }
 
-        /* SECTION TITLE */
+        /* SECTION */
         h2 {
             font-weight: bold;
+        }
+
+        .section {
+            padding: 60px 0;
         }
 
         /* CONTACT */
@@ -70,25 +71,7 @@
             background: #fff;
             border-radius: 16px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        /* HOTLINE */
-        .hotline {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            z-index: 999;
-        }
-
-        .hotline a {
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            padding: 40px;
         }
     </style>
 
@@ -96,11 +79,12 @@
 
 <body>
 
-    <!-- TOP BAR -->
+    <!-- TOP -->
     <div class="top-bar">
-        🚖 Taxi Phan Thiết - Đón nhanh 24/7 | Giá trọn gói
+        🚖 Trang giới thiệu dịch vụ Taxi Phan Thiết 4 - 7 chỗ - Sân bay - Liên tỉnh
     </div>
 
+    <!-- NAVBAR -->
     <?php $this->load->view('layout/navbar'); ?>
 
     <!-- HERO -->
@@ -112,9 +96,9 @@
             </span>
 
             <h1 class="fw-bold">Taxi Phan Thiết 4 - 7 chỗ</h1>
-            <p class="mb-3">Sân bay - Liên tỉnh - Nội thành</p>
+            <p>Sân bay - Liên tỉnh - Nội thành - Du lịch</p>
 
-            <a href="tel:0397891900" class="btn btn-warning btn-lg">
+            <a href="tel:0397891900" class="btn btn-warning btn-lg mt-3">
                 📞 Gọi ngay 0397 891 900
             </a>
 
@@ -122,23 +106,24 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="container py-5 text-center">
-        <h2>Về chúng tôi</h2>
-        <p class="text-muted mb-4">
-            Dịch vụ taxi uy tín tại Phan Thiết phục vụ du lịch & đi lại hằng ngày
-        </p>
-
-        <p>
-            Chúng tôi cung cấp taxi <b>4 chỗ, 7 chỗ, sân bay và liên tỉnh</b> với tiêu chí:
+    <section class="container section text-center">
+        <h2>Giới thiệu dịch vụ</h2>
+        <p class="text-muted">
+            Dịch vụ taxi Phan Thiết phục vụ khách du lịch và người dân với tiêu chí:
         </p>
 
         <p class="fw-bold text-danger">
-            ✔ An toàn - ✔ Đúng giờ - ✔ Giá minh bạch - ✔ 24/7
+            ✔ An toàn - ✔ Đúng giờ - ✔ Giá minh bạch - ✔ Phục vụ 24/7
+        </p>
+
+        <p>
+            Chúng tôi cung cấp đa dạng dịch vụ từ taxi nội thành, taxi sân bay đến taxi liên tỉnh
+            giúp khách hàng di chuyển linh hoạt, tiện lợi và tiết kiệm chi phí.
         </p>
     </section>
 
     <!-- SERVICE -->
-    <section class="container py-5 text-center">
+    <section class="container section text-center">
         <h2 class="mb-4">Dịch vụ của chúng tôi</h2>
 
         <div class="row g-4">
@@ -175,7 +160,7 @@
     </section>
 
     <!-- WHY -->
-    <section class="container py-5 text-center">
+    <section class="container section text-center">
         <h2 class="mb-4">Vì sao chọn chúng tôi?</h2>
 
         <div class="row g-4">
@@ -207,22 +192,21 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="container py-5 text-center">
-        <h2>Đặt xe ngay</h2>
-        <p>Chỉ cần gọi là có xe trong 5–10 phút</p>
+    <!-- CONTACT CTA -->
+    <section class="container section text-center">
+        <div id="contact">
+            <h2>Đặt xe ngay</h2>
+            <p>Chỉ cần gọi là có xe trong 5–10 phút</p>
 
-        <a href="tel:0397891900" class="btn btn-danger btn-lg mt-2">
-            📞 0397 891 900
-        </a>
+            <a href="tel:0397891900" class="btn btn-danger btn-lg mt-2">
+                📞 0397 891 900
+            </a>
+        </div>
     </section>
 
-    <!-- FLOAT HOTLINE -->
-    <div class="hotline">
-        <a href="tel:0397891900" class="btn btn-danger">
-            <i class="bi bi-telephone-fill"></i>
-        </a>
-    </div>
+    <!-- FOOTER -->
+    <?php $this->load->view('layout/footer'); ?>
+    <?php $this->load->view('layout/dropboxcontact'); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 

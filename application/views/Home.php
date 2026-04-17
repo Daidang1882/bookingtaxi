@@ -23,37 +23,35 @@
 	<?php $this->load->view('layout/navbar'); ?>
 	<!-- HERO -->
 
-	<div class="hero">
+	<section class="hero">
 		<div class="container">
-			<div class="row align-items-center g-4">
+			<div class="row g-2 align-items-center">
 
-				<div class="col-lg-7">
-					<h1 class="fw-bold">Taxi PHAN THIẾT</h1>
-					<h4>Có Xe Sau 5 Phút</h4>
-					<p>Hành trình an toàn - Giá cả minh bạch</p>
-					<a href="tel:09*****67" class="btn btn-warning">📞 Gọi ngay</a>
+				<!-- TEXT -->
+				<div class="col-lg-5 text-white">
+					<h1 class="fw-bold mb-3">Taxi PHAN THIẾT</h1>
+
+					<h4 class="mb-3">Có Xe Sau 5 Phút</h4>
+
+					<p class="mb-4">
+						Hành trình an toàn - Giá cả minh bạch - Phục vụ 24/7
+					</p>
+
+					<a href="tel:0397891900" class="btn btn-warning btn-lg px-4">
+						📞 Gọi ngay
+					</a>
 				</div>
 
-				<div class="col-lg-5">
-					<div class="booking-form">
-						<h5 class="mb-3">Đặt xe nhanh</h5>
-						<input class="form-control mb-2" placeholder="Điểm đón">
-						<input class="form-control mb-2" placeholder="Điểm đến">
-						<input type="datetime-local" class="form-control mb-2">
-						<select class="form-select mb-2">
-							<option>Chọn xe</option>
-							<option>4 chỗ</option>
-							<option>7 chỗ</option>
-							<option>Limousine</option>
-						</select>
-						<a href="tel:0901*****567" class="btn btn-warning w-100">Đặt xe ngay</a>
+				<!-- FORM -->
+				<div class="col-lg-7">
+					<div class="form-wrapper">
+						<?php $this->load->view('layout/form'); ?>
 					</div>
 				</div>
 
 			</div>
 		</div>
-	</div>
-
+	</section>
 
 	<!-- SERVICES -->
 	<section id="services" class="container py-5 text-center">
@@ -147,17 +145,10 @@
 
 	</div>
 	<!-- FOOTER -->
-	<footer id="contact" class="bg-dark text-white text-center p-4">
-		<p>Địa chỉ: TP.HCM</p>
-		<p>Hotline: 0901234567</p>
-	</footer>
+	<?php $this->load->view('layout/footer'); ?>
 
 	<!-- FLOAT BUTTON -->
-	<script>
-		function toggleHotline() {
-			document.querySelector('.sticky-hotline').classList.toggle('active');
-		}
-	</script>
+
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 

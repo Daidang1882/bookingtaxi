@@ -6,9 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đặt xe Taxi 24/7</title>
 
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS custom -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial;
@@ -19,58 +31,50 @@
             background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
                 url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;
             color: #fff;
-            padding: 80px 0;
+            padding: 90px 0;
         }
 
         /* BOX */
         .box {
             background: #fff;
-            padding: 20px;
+            padding: 25px;
             border-radius: 12px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
             height: 100%;
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
         }
 
         /* BOOKING */
         .booking-box {
             background: #fff;
-            padding: 20px;
+            padding: 25px;
             border-radius: 12px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* FLOAT BUTTON */
-        .zalo-float,
-        .hotline {
-            position: fixed;
-            right: 20px;
-            z-index: 999;
+        /* BUTTON CTA */
+        .btn-call {
+            background: #ffc107;
+            font-weight: bold;
         }
 
-        .zalo-float {
-            bottom: 90px;
-        }
-
-        .hotline {
-            bottom: 20px;
-        }
-
-        .zalo-float a,
-        .hotline a {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
+        /* MAP */
+        .map {
+            border-radius: 12px;
+            overflow: hidden;
         }
     </style>
+
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
     <?php $this->load->view('layout/navbar'); ?>
 
     <!-- HERO -->
@@ -78,54 +82,19 @@
         <div class="container">
             <h1 class="fw-bold">Đặt xe Taxi 24/7</h1>
             <p>Nhanh - Rẻ - Không phát sinh chi phí</p>
-            <a href="tel:0397891900" class="btn btn-warning btn-lg mt-3">
+
+            <a href="tel:0397891900" class="btn btn-warning btn-lg mt-3 fw-bold">
                 📞 Gọi xe ngay
             </a>
         </div>
     </section>
 
-    <!-- FORM -->
-    <section class="container py-5">
-        <div class="row g-4">
+    <!-- BOOKING -->
+        <section class="container py-5">
+           <?php $this->load->view('layout/form'); ?>
+        </section>
 
-            <div class="col-md-6">
-                <div class="booking-box">
-                    <h4>🚖 Đặt xe nhanh</h4>
-
-                    <input class="form-control mb-2" placeholder="Điểm đón">
-                    <input class="form-control mb-2" placeholder="Điểm đến">
-
-                    <select class="form-select mb-2">
-                        <option>Chọn loại xe</option>
-                        <option>4 chỗ</option>
-                        <option>7 chỗ</option>
-                        <option>16 chỗ</option>
-                    </select>
-
-                    <input type="datetime-local" class="form-control mb-3">
-
-                    <button class="btn btn-warning w-100 fw-bold">
-                        Nhận báo giá ngay
-                    </button>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <h4>📞 Liên hệ nhanh</h4>
-
-                <a href="tel:0397891900" class="btn btn-danger w-100 mb-2">
-                    📞 Gọi ngay
-                </a>
-
-                <a href="https://zalo.me/0397891900" class="btn btn-primary w-100">
-                    💬 Zalo báo giá
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SERVICE -->
+    <!-- SERVICES -->
     <section class="bg-light py-5 text-center">
         <div class="container">
             <h2 class="mb-4">Dịch vụ</h2>
@@ -147,9 +116,9 @@
         </div>
     </section>
 
-    <!-- PRICE -->
+    <!-- PRICING -->
     <section class="container py-5 text-center">
-        <h2>Bảng giá</h2>
+        <h2 class="mb-4">Bảng giá</h2>
 
         <div class="row g-4">
             <div class="col-md-4">
@@ -179,7 +148,7 @@
     <section class="container py-5">
         <h4 class="text-center mb-3">Khu vực phục vụ</h4>
 
-        <div style="border-radius:12px; overflow:hidden;">
+        <div class="map">
             <iframe
                 src="https://www.google.com/maps?q=Phan+Thiet&output=embed"
                 width="100%"
@@ -200,28 +169,26 @@
 
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="box">🚗 Xe sạch</div>
+                    <div class="box">🚗 Xe sạch - đời mới</div>
                 </div>
                 <div class="col-md-4">
-                    <div class="box">⏰ Đúng giờ</div>
+                    <div class="box">⏰ Đón đúng giờ</div>
                 </div>
                 <div class="col-md-4">
-                    <div class="box">💰 Không phí ẩn</div>
+                    <div class="box">💰 Không phát sinh phí</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FLOAT BUTTON -->
-    <div class="zalo-float">
-        <a href="https://zalo.me/0397891900" class="btn btn-primary">Z</a>
-    </div>
 
-    <div class="hotline">
-        <a href="tel:0397891900" class="btn btn-danger">
-            <i class="bi bi-telephone-fill"></i>
-        </a>
-    </div>
+
+    <!-- FOOTER -->
+    <?php $this->load->view('layout/footer'); ?>
+
+    <?php $this->load->view('layout/dropboxcontact'); ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
