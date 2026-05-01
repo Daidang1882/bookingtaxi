@@ -19,29 +19,19 @@
 
 <body>
     <div class="sticky-hotline">
-
-        <!-- các nút con -->
-        <div class="sub-btns">
-            <a href="tel:0901234567" class="btn btn-danger rounded-circle">
-                <i class="bi bi-telephone-fill"></i>
-            </a>
-
-            <a href="https://zalo.me/0901234567" target="_blank" class="btn btn-primary rounded-circle">
-                Z
-            </a>
-
-            <a href="https://m.me/yourpage" target="_blank" class="btn btn-info rounded-circle">
-                <i class="bi bi-messenger"></i>
-            </a>
-        </div>
-
-        <!-- nút chính -->
-        <a class="btn btn-danger main-btn" onclick="toggleHotline()">
-            <i class="bi bi-plus"></i>
+        <a href="tel:0345834321 " class="hotline-btn phone-btn">
+            <i class="bi bi-telephone-fill"></i>
         </a>
 
+        <a href="https://zalo.me/0345834321" class="hotline-btn zalo-btn" target="_blank">
+            <img src="<?php echo base_url('assets/image/logozalo.png'); ?>"
+                alt="Zalo"
+                class="zalo-icon">
+        </a>
+        <a href="#" class="hotline-btn mess-btn">
+            <i class="bi bi-messenger"></i>
+        </a>
     </div>
-
     <script>
         function toggleHotline() {
             document.querySelector('.sticky-hotline').classList.toggle('active');

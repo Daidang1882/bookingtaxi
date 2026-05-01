@@ -1,111 +1,544 @@
-.hero{
-    background: #dbdbdb;
-    padding: 30px 0;
-    margin: 20px 20px;
+/* ===== GLOBAL ===== */
+body {
+    background: #000;
+    color: #fff;
+}
+
+/* ===== NAVBAR ===== */
+.custom-navbar {
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.custom-navbar.scrolled,
+.custom-navbar:has(.navbar-collapse.show) {
+    background: rgba(0, 0, 0, 0.95);
+}
+
+.navbar .nav-link {
+    color: #fff;
+    font-weight: 500;
+    transition: 0.1s;
+}
+
+.navbar .nav-link:hover,
+a:hover {
+    color: #ffc107;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        margin-top: 12px;
+        padding: 15px;
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.95);
+    }
+
+    .navbar .nav-item:last-child .nav-link {
+        border-bottom: none;
+    }
+}
+
+/* ===== BUTTON ===== */
+.btn-warning {
+    background: #ffc107;
+    border: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.btn-warning:hover {
+    background: #e0a800;
+}
+
+/* ===== BOOKING ===== */
+.booking-box {
+    max-width: 380px;
+    margin-left: auto;
+    backdrop-filter: blur(10px);
+    border: 1px solid #333;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.booking-box input,
+.booking-box select {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.booking-box button {
     border-radius: 10px;
+    padding: 12px;
+    font-size: 16px;
 }
 
-.car-img {
-    width: 100%;
-    height: 200px;        /* chỉnh chiều cao tại đây */
-    object-fit: cover;    /* ảnh tự crop cho đều */
-    border-radius: 12px;
+/* ===== ABOUT ===== */
+.about-text {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.8;
+    color: #ffc107;
 }
 
-
-
+/* ===== SERVICE ===== */
 .service-box {
-    background: #f5f5f5;
+    background: #111;
+    color: #fff;
     padding: 30px 10px;
     border-radius: 12px;
-    height: 120px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    border: 1px solid #222;
     transition: 0.3s;
-    cursor: pointer;
 }
 
 .service-box:hover {
     background: #ffc107;
+    color: #000;
     transform: translateY(-5px);
 }
 
-/* icon */
-
-
-/* container chính */
-.sticky-hotline {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 999;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.service-box span {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 8px;
 }
 
-/* nút chính */
-.sticky-hotline .main-btn {
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
+/* ===== CAR ===== */
+.car-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
-/* nhóm nút con */
-.sticky-hotline .sub-btns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* ===== PRICING ===== */
+.pricing-section,
+.tour-section,
+.wedding-service,
+.testimonial-section {
+    background: #000;
+}
 
-    margin-bottom: 10px;
-
-    opacity: 0;
-    transform: translateY(20px);
-    pointer-events: none;
+.price-card,
+.wedding-item,
+.testimonial-card {
+    background: #111;
+    color: #fff;
+    border-radius: 12px;
+    border: 1px solid #222;
     transition: 0.3s;
 }
 
-/* khi active */
+.price-card {
+    padding: 30px;
+}
+
+.testimonial-card,
+.wedding-item {
+    padding: 15px;
+}
+
+.price-card:hover,
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.wedding-item:hover {
+    box-shadow: 0 5px 20px rgba(255, 193, 7, 0.2);
+}
+
+.price-card h4,
+.wedding-item h5,
+.testimonial-card h6 {
+    font-weight: 700;
+    color: #ffc107;
+}
+
+.price-card h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #333;
+}
+
+.price-item span,
+.wedding-item p,
+.comment {
+    color: #ccc;
+}
+
+.price-item strong {
+    color: #ffc107;
+}
+
+/* ===== TOUR ===== */
+.tour-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.tour-img:hover {
+    transform: scale(1.05);
+}
+
+.tour-section p {
+    margin-top: 8px;
+    font-weight: 600;
+    color: #ffc107;
+}
+
+/* ===== IMAGE ===== */
+.wedding-img,
+.avatar {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.wedding-img {
+    height: 400px;
+}
+
+.avatar {
+    aspect-ratio: 1/1;
+    margin-bottom: 15px;
+}
+
+.comment {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* ===== VIDEO ===== */
+.video-box-big {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.video-box-big iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== MAP ===== */
+.map-box {
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid #ffc107;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ===== HERO INTRO ===== */
+.intro-hero {
+    width: 100%;
+    height: 400px;
+    background:
+        linear-gradient(rgba(185,145,0,0.55), rgba(185,145,0,0.55)),
+        url('../image/taxibackground.jpg') center/cover no-repeat;
+}
+
+.intro-box {
+    display: inline-block;
+    padding: 25px 80px;
+    border: 6px solid #fff;
+    background: rgba(0,0,0,0.15);
+}
+
+.intro-box h1 {
+    color: #fff;
+    font-size: 70px;
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: Georgia, serif;
+    letter-spacing: 2px;
+}
+
+/* ===== INTRO TAXI ===== */
+.intro-taxi-section {
+    background: #111;
+    padding: 60px 0;
+}
+
+.intro-taxi-box {
+    background: linear-gradient(135deg, #ffc107, #d4a000);
+    border-radius: 18px;
+    padding: 50px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    border: 3px solid rgba(255,255,255,0.4);
+}
+
+.phone-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.intro-title {
+    font-size: 34px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.intro-title span {
+    color: #fff;
+}
+
+.intro-desc {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.intro-desc strong {
+    color: #b00000;
+    font-size: 26px;
+}
+
+.call-btn {
+    display: inline-block;
+    margin-top: 25px;
+    background: #111;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    border: 2px solid #111;
+    transition: all 0.3s ease;
+}
+
+.call-btn:hover {
+    background: #ffc107;
+    color: #111 !important;
+    border-color: #ffc107;
+    transform: translateY(-3px);
+}
+
+/* ===== HOTLINE ===== */
+.sticky-hotline {
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .sticky-hotline.active .sub-btns {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
 }
 
-/* từng nút con */
-.sticky-hotline .sub-btns a {
-    width: 50px;
-    height: 50px;
+.hotline-btn {
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
-    font-size: 20px;
-
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
 
+.hotline-btn:hover {
+    transform: scale(1.1);
+    color: #fff !important;
+}
+
+.phone-btn {
+    background: #111;
+    color: #ffc107;
+    border: 2px solid #ffc107;
+    animation: ring 1.8s infinite;
+}
+
+.zalo-btn {
+    width: 55px;
+    height: 55px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mess-btn {
+    background: linear-gradient(45deg,#0084ff,#00c6ff);
+}
+
+.zalo-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes ring {
+    0%, 20%, 100% { transform: rotate(0); }
+    5%, 15% { transform: rotate(10deg); }
+    10% { transform: rotate(-10deg); }
+}
+
+/* ===== OTHER ===== */
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+    border-radius: 15px;
+}
+
+.section-divider {
+    width: 100%;
+    height: 2px;
+    background: #ffd900;
+    margin: 40px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .about-text {
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+
+    .service-box {
+        padding: 20px 10px;
+    }
+
+    .service-box span {
+        font-size: 24px;
+    }
+
+    .intro-hero {
+        height: 220px;
+    }
+
+    .intro-box {
+        padding: 12px 25px;
+        border-width: 3px;
+    }
+
+    .intro-box h1 {
+        font-size: 28px;
+    }
+
+    .intro-taxi-box {
+        padding: 30px 20px;
+    }
+
+    .intro-title {
+        font-size: 26px;
+    }
+
+    .intro-desc {
+        font-size: 17px;
+    }
+
+    .sticky-hotline {
+        right: 12px;
+        bottom: 15px;
+    }
+
+    .hotline-btn,
+    .zalo-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .call-btn {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .section-divider {
+        margin: 25px 0;
+    }
+}
+
+
+/* ===== POLICY ===== */
+.policy-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 15px;
+    padding: 30px;
+    color: #fff;
+    transition: .3s;
+}
+
+.policy-card:hover {
+    transform: translateY(-4px);
+}
+
+.policy-card h3 {
+    color: #ffc107;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.policy-card p,
+.policy-card li {
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.policy-card ul {
+    padding-left: 20px;
+}
+
+.policy-card li {
     margin-bottom: 10px;
 }
 
-/* hover */
-.sticky-hotline a:hover {
-    transform: scale(1.1);
-}
+@media(max-width:768px) {
+    .policy-card {
+        padding: 20px;
+    }
 
-/* icon dịch vụ giữ nguyên */
-.service-box span {
-    font-size: 32px;
-    display: block;
-    margin-bottom: 8px;
+    .policy-card h3 {
+        font-size: 22px;
+    }
 }

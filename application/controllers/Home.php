@@ -23,22 +23,13 @@ class Home extends CI_Controller
 	{
 		$this->load->view('home');
 	}
-
-	public function airporttaxi()
+	public function introduce()
 	{
-		$this->load->view('airporttaxi');
+		$this->load->view('introduce');
 	}
 
-	public function service()
+	public function policy()
 	{
-		$this->load->view('service');
-	}
-	public function contact()
-	{
-		$this->load->view('contact');
-	}
-	public function pricelist()
-	{
-		$this->load->view('pricelist');
+		$this->load->view('policy');
 	}
 }

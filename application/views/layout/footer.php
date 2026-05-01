@@ -1,4 +1,4 @@
-<footer id="contact" class="bg-dark text-white text-center p-4">
-    <p>Địa chỉ: TP.HCM</p>
-    <p>Hotline: 0901234567</p>
-</footer>
+<footer id="contact" class="bg-dark text-white text-right p-4">
+    <p>Địa chỉ:Phan thiết.Hàm thuận bắc.Lâm đồng</p>
+    <p>Hotline: 0345834321 </p>
+</footer> 
