@@ -28,7 +28,10 @@
                 alt="Zalo"
                 class="zalo-icon">
         </a>
-        <a href="#" class="hotline-btn mess-btn">
+        <a href="https://www.facebook.com/Lamgiaanh1992?mibextid=wwXIfr&rdid=EEH48vOIqRPbiI6j&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1cYe8Nm4oT%2F%3Fmibextid%3DwwXIfr"
+            class="hotline-btn mess-btn"
+            target="_blank"
+            rel="noopener noreferrer">
             <i class="bi bi-messenger"></i>
         </a>
     </div>

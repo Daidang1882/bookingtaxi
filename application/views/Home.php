@@ -5,10 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tổng đài Taxi Phan Thiết</title>
-
-	<!-- Bootstrap -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+	<link rel="icon" type="image/x-icon" href="<?php echo base_url('assets/image/logo.ico'); ?>">
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
@@ -328,6 +325,7 @@
 	<div class="section-divider"></div>
 
 
+
 	<section class="container my-5">
 		<div class="about-box text-center">
 			<p class="about-text">
@@ -339,6 +337,42 @@
 
 	<div class="section-divider"></div>
 
+
+
+	<section class="tour-section py-5">
+		<div class="container">
+
+			<div class="row g-4 text-center">
+
+				<div class="col-6 col-md-3">
+					<div class="tour-item">
+						<img src="assets/image/car1.jpg" class="car-img">
+					</div>
+				</div>
+
+				<div class="col-6 col-md-3">
+					<div class="tour-item">
+						<img src="assets/image/car2.jpg" class="car-img">
+					</div>
+				</div>
+
+				<div class="col-6 col-md-3">
+					<div class="tour-item">
+						<img src="assets/image/car3.jpg" class="car-img">
+					</div>
+				</div>
+
+				<div class="col-6 col-md-3">
+					<div class="tour-item">
+						<img src="assets/image/car4.jpg" class="car-img">
+					</div>
+				</div>
+
+
+	</section>
+
+
+	<div class="section-divider"></div>
 
 	<!-- Đánh giá khách hàng -->
 	<section class="testimonial-section py-5">
